@@ -97,18 +97,24 @@ function App() {
   }
 
   /**
-   * Open edit form with game data
+   * Open edit form with game data (fetches details to get genreId)
    */
-  const handleEdit = (game) => {
-    setEditingId(game.id)
-    setFormData({
-      name: game.name,
-      genreId: game.genreId,
-      price: game.price,
-      releaseDate: game.releaseDate.split('T')[0],
-    })
-    setShowForm(true)
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+  const handleEdit = async (game) => {
+    try {
+      const details = await gamesApi.getById(game.id)
+      setEditingId(details.id)
+      setFormData({
+        name: details.name,
+        genreId: details.genreId,
+        price: details.price,
+        releaseDate: details.releaseDate.split('T')[0],
+      })
+      setShowForm(true)
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    } catch (err) {
+      setError(err.message)
+      console.error('Failed to load game details:', err)
+    }
   }
 
   /**

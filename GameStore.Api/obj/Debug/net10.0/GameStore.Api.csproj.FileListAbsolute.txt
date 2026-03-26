@@ -288,3 +288,4 @@ C:\CSharp Projs\GameStore\GameStore.Api\obj\Debug\net10.0\refint\GameStore.Api.d
 C:\CSharp Projs\GameStore\GameStore.Api\obj\Debug\net10.0\GameStore.Api.pdb
 C:\CSharp Projs\GameStore\GameStore.Api\obj\Debug\net10.0\GameStore.Api.genruntimeconfig.cache
 C:\CSharp Projs\GameStore\GameStore.Api\obj\Debug\net10.0\ref\GameStore.Api.dll
+C:\CSharp Projs\GameStore\GameStore.Api\obj\Debug\net10.0\GameStore.Api.sourcelink.json
